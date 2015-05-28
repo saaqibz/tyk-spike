@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body ng-app="app-nav" ng-controller="NavCtrl as nav">
+  <div ng-if="!nav.token">
+    <form name="login" ng-submit="nav.submit()">
+      Email: <input type="email" name="email" ng-model='nav.email' placeholder="Enter Email"/><br>
+      Password: <input type="password" name="password" ng-model='nav.password' placeholder="Password"/><br>
+      <button>Submit</button>
+    </form>
+  </div>
+  <div ng-if="nav.token">
+    <h1>You received the token: <code>{{nav.token}}</code></h1>
+    <div>
+      <h2>Nav:</h2>
+      <ul>
+        <li><a href="app1/index.html">App 1</a>: Add Item</li>
+        <li><a href="app2/index.html">App 2</a>: View Items</li>
+      </ul>
+    </div>
+  </div>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

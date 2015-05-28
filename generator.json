@@ -1,0 +1,72 @@
+{
+	"baseName": "tyk-spike",
+	"entities": [
+		{
+			"name": "user",
+			"attrs": [
+				{
+					"attrName": "email",
+					"attrType": "String",
+					"minLength": "3",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "password",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "tokens",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": false
+				}
+			]
+		},
+		{
+			"name": "item",
+			"attrs": [
+				{
+					"attrName": "id",
+					"attrType": "Integer",
+					"min": "",
+					"max": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "name",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "description",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": false
+				},
+				{
+					"attrName": "thumbnail",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": false
+				}
+			]
+		}
+	],
+	"resources": []
+}

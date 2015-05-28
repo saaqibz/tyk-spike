@@ -1,0 +1,339 @@
+[
+  {
+    "id": "55663cf279b7fc0001000003",
+    "name": "Website",
+    "slug": "web",
+    "api_id": "83a6483ab757434969ad65b0f3bdba6b",
+    "org_id": "5566353f79b7fc0001000001",
+    "use_keyless": true,
+    "use_oauth2": false,
+    "oauth_meta": {
+      "allowed_access_types": [],
+      "allowed_authorize_types": [],
+      "auth_login_redirect": ""
+    },
+    "auth": {
+      "use_param": false,
+      "auth_header_name": ""
+    },
+    "use_basic_auth": false,
+    "notifications": {
+      "shared_secret": "",
+      "oauth_on_keychange_url": ""
+    },
+    "enable_signature_checking": false,
+    "hmac_allowed_clock_skew": -1,
+    "definition": {
+      "location": "header",
+      "key": "x-api-version"
+    },
+    "version_data": {
+      "not_versioned": true,
+      "versions": {
+        "Default": {
+          "name": "Default",
+          "expires": "",
+          "paths": {
+            "ignored": [],
+            "white_list": [],
+            "black_list": []
+          },
+          "use_extended_paths": true,
+          "extended_paths": {
+            "ignored": [],
+            "white_list": [],
+            "black_list": [
+              {
+                "path": "/auth",
+                "method_actions": {
+                  "GET": {
+                    "action": "no_action",
+                    "code": 200,
+                    "data": "",
+                    "headers": {}
+                  }
+                }
+              },
+              {
+                "path": "/api",
+                "method_actions": {
+                  "GET": {
+                    "action": "no_action",
+                    "code": 200,
+                    "data": "",
+                    "headers": {}
+                  }
+                }
+              }
+            ],
+            "cache": [],
+            "transform": [],
+            "transform_headers": []
+          }
+        }
+      }
+    },
+    "proxy": {
+      "listen_path": "/web/",
+      "target_url": "http://192.168.220.132:15000/",
+      "strip_listen_path": true
+    },
+    "custom_middleware": {
+      "pre": [],
+      "post": []
+    },
+    "cache_options": {
+      "cache_timeout": 60,
+      "enable_cache": true,
+      "cache_all_safe_requests": false,
+      "enable_upstream_cache_control": false
+    },
+    "session_lifetime": 0,
+    "active": true,
+    "auth_provider": {
+      "name": "",
+      "storage_engine": "",
+      "meta": {}
+    },
+    "session_provider": {
+      "name": "",
+      "storage_engine": "",
+      "meta": null
+    },
+    "event_handlers": {
+      "events": {}
+    },
+    "enable_batch_request_support": false,
+    "enable_ip_whitelisting": false,
+    "allowed_ips": [],
+    "dont_set_quota_on_create": false,
+    "expire_analytics_after": 0
+  },
+  {
+    "id": "55663cfe79b7fc0001000004",
+    "name": "Authenticate",
+    "slug": "auth",
+    "api_id": "f08b815b93ac48316b4241cb16651b81",
+    "org_id": "5566353f79b7fc0001000001",
+    "use_keyless": true,
+    "use_oauth2": false,
+    "oauth_meta": {
+      "allowed_access_types": [],
+      "allowed_authorize_types": [],
+      "auth_login_redirect": ""
+    },
+    "auth": {
+      "use_param": false,
+      "auth_header_name": ""
+    },
+    "use_basic_auth": false,
+    "notifications": {
+      "shared_secret": "",
+      "oauth_on_keychange_url": ""
+    },
+    "enable_signature_checking": false,
+    "hmac_allowed_clock_skew": -1,
+    "definition": {
+      "location": "header",
+      "key": "x-api-version"
+    },
+    "version_data": {
+      "not_versioned": true,
+      "versions": {
+        "Default": {
+          "name": "Default",
+          "expires": "",
+          "paths": {
+            "ignored": [],
+            "white_list": [],
+            "black_list": []
+          },
+          "use_extended_paths": true,
+          "extended_paths": {
+            "ignored": [],
+            "white_list": [
+              {
+                "path": "/auth",
+                "method_actions": {
+                  "GET": {
+                    "action": "no_action",
+                    "code": 200,
+                    "data": "",
+                    "headers": {}
+                  },
+                  "POST": {
+                    "action": "no_action",
+                    "code": 200,
+                    "data": "",
+                    "headers": {}
+                  }
+                }
+              }
+            ],
+            "black_list": [],
+            "cache": [],
+            "transform": [],
+            "transform_headers": []
+          }
+        }
+      }
+    },
+    "proxy": {
+      "listen_path": "/auth/",
+      "target_url": "http://192.168.220.132:15000/auth/",
+      "strip_listen_path": true
+    },
+    "custom_middleware": {
+      "pre": [],
+      "post": []
+    },
+    "cache_options": {
+      "cache_timeout": 60,
+      "enable_cache": true,
+      "cache_all_safe_requests": false,
+      "enable_upstream_cache_control": false
+    },
+    "session_lifetime": 0,
+    "active": true,
+    "auth_provider": {
+      "name": "",
+      "storage_engine": "",
+      "meta": {}
+    },
+    "session_provider": {
+      "name": "",
+      "storage_engine": "",
+      "meta": null
+    },
+    "event_handlers": {
+      "events": {}
+    },
+    "enable_batch_request_support": false,
+    "enable_ip_whitelisting": false,
+    "allowed_ips": [],
+    "dont_set_quota_on_create": false,
+    "expire_analytics_after": 0
+  },
+  {
+    "id": "55663d0a79b7fc0001000005",
+    "name": "Restricted",
+    "slug": "restricted",
+    "api_id": "1d59c63daa97444b74de2651d4619471",
+    "org_id": "5566353f79b7fc0001000001",
+    "use_keyless": false,
+    "use_oauth2": true,
+    "oauth_meta": {
+      "allowed_access_types": [
+        "authorization_code",
+        "refresh_token"
+      ],
+      "allowed_authorize_types": [
+        "token"
+      ],
+      "auth_login_redirect": "http://localhost:15000/auth/store_token"
+    },
+    "auth": {
+      "use_param": false,
+      "auth_header_name": "Authorization"
+    },
+    "use_basic_auth": false,
+    "notifications": {
+      "shared_secret": "",
+      "oauth_on_keychange_url": ""
+    },
+    "enable_signature_checking": false,
+    "hmac_allowed_clock_skew": -1,
+    "definition": {
+      "location": "header",
+      "key": "x-api-version"
+    },
+    "version_data": {
+      "not_versioned": true,
+      "versions": {
+        "Default": {
+          "name": "Default",
+          "expires": "",
+          "paths": {
+            "ignored": [],
+            "white_list": [],
+            "black_list": []
+          },
+          "use_extended_paths": true,
+          "extended_paths": {
+            "ignored": [],
+            "white_list": [
+              {
+                "path": "/api",
+                "method_actions": {
+                  "DELETE": {
+                    "action": "no_action",
+                    "code": 200,
+                    "data": "",
+                    "headers": {}
+                  },
+                  "GET": {
+                    "action": "no_action",
+                    "code": 200,
+                    "data": "",
+                    "headers": {}
+                  },
+                  "POST": {
+                    "action": "no_action",
+                    "code": 200,
+                    "data": "",
+                    "headers": {}
+                  },
+                  "PUT": {
+                    "action": "no_action",
+                    "code": 200,
+                    "data": "",
+                    "headers": {}
+                  }
+                }
+              }
+            ],
+            "black_list": [],
+            "cache": [],
+            "transform": [],
+            "transform_headers": []
+          }
+        }
+      }
+    },
+    "proxy": {
+      "listen_path": "/restricted/",
+      "target_url": "http://192.168.220.132:15000/",
+      "strip_listen_path": true
+    },
+    "custom_middleware": {
+      "pre": [],
+      "post": []
+    },
+    "cache_options": {
+      "cache_timeout": 60,
+      "enable_cache": true,
+      "cache_all_safe_requests": false,
+      "enable_upstream_cache_control": false
+    },
+    "session_lifetime": 0,
+    "active": true,
+    "auth_provider": {
+      "name": "",
+      "storage_engine": "",
+      "meta": {}
+    },
+    "session_provider": {
+      "name": "",
+      "storage_engine": "",
+      "meta": null
+    },
+    "event_handlers": {
+      "events": {}
+    },
+    "enable_batch_request_support": false,
+    "enable_ip_whitelisting": false,
+    "allowed_ips": [],
+    "dont_set_quota_on_create": false,
+    "expire_analytics_after": 0
+  }
+]
