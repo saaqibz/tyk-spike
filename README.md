@@ -31,7 +31,7 @@ I’m running this off of an Ubuntu 14.04LTS Virtual machine. I may have some de
 Additional References can be found here: https://tyk.io/blog/running-tyk-with-docker/
 
 - Install docker (in Ubuntu 14.04LTS it’s `sudo apt-get install docker.io`)
-- create a docker group and add your user to it so you’re not running it as root following the below directions: https://docs.docker.com/installation/ubuntulinux/#create-a-docker-group
+- create a docker group and add your user to it so you’re not running it as root following the below directions: https://docs.docker.com/installation/ubuntulinux/#create-a-docker-group. You can use this post as a guide: http://askubuntu.com/a/477554
 - You will need to have a local DNS setup. You can do this by modifying the hosts file or you can setup a local dns for the desired extensions using dnsmasq set up with the following guide:
 
 	o	https://www.computersnyou.com/3786/how-to-setup-dnsmasq-local-dns/
